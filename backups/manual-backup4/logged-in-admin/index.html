@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>
+		MAIN--
+	</title>
+</head>
+<body>
+	<div id="dom-connection" style="display: none;">
+	</div>
+	<div id="main-container">
+		<div id="nav-open" onclick="open_nav()">
+			<img src="dum-img/menu.png">
+		</div>
+		<div id="nav-container">
+			<div id="nav-close" onclick="close_nav()">
+				<img id="nav-close-btn" src="dum-img/left_arrow.png">
+			</div>
+			<div id="nav-user">
+				<div id="profile-pic">
+					<img src="dum-img/user.png">
+				</div>
+				<div id="profile-desc">
+					<span>
+						Selamat Datang,
+					</span>
+					<span>
+						Admin <a href="login.html">Logout!</a>
+					</span>
+				</div>
+			</div>
+			<div id="nav-content">
+				<div class="nav-inner-content">
+					<span class="nav-inner" onclick="nav_inner_click(this)"><h3>ADD MORE BOOK</h3></span>
+					<span><img src="dum-img/right_arrow.png"></span>
+				</div>
+				<div id="form-add-book" class="expand-nav-inner">
+					<form>
+						<span>
+							<p>ISBN :</p>
+							<input type="" name="">
+						</span>
+						<span>
+							<p>JUDUL :</p>
+							<input type="" name="">
+						</span>
+						<span>
+							<p>HARGA :</p>
+							<input type="" name="">
+						</span>
+						<span>
+							<p>STOK :</p>
+							<input type="" name="">
+						</span>
+						<span>
+							<p>PICTURE :</p>
+							<input type="file" name="">
+						</span>
+						<div id="form-add-book-btn">
+							<button>Cancel</button>
+							<button>Save</button>
+						</div>
+					</form>
+				</div>
+				<div class="nav-inner-content">
+					<span class="nav-inner" onclick="nav_inner_click(this)"><h3>DELETE BOOK</h3></span>
+					<span><img src="dum-img/right_arrow.png"></span>
+				</div>
+				<div id="form-delete-book" class="expand-nav-inner">
+					<span><h3 style="margin: 10px 0px 0px 0px;">Data to be Deleted : </h3></span>
+					<span>
+						<ul id="delete-ul">
+							
+						</ul>
+					</span>
+				</div>
+				<div class="nav-inner-content">
+					<span class="nav-inner" onclick="nav_inner_click(this)"><h3>UPDATE BOOK</h3></span>
+					<span><img src="dum-img/right_arrow.png"></span>
+				</div>
+				<div class="expand-nav-inner">
+					<form>
+						<span>
+							<p>ISBN :</p>
+							<input type="" name="">
+						</span>
+						<span>
+							<p>JUDUL :</p>
+							<input type="" name="">
+						</span>
+						<span>
+							<p>HARGA :</p>
+							<input type="" name="">
+						</span>
+						<span>
+							<p>STOK :</p>
+							<input type="" name="">
+						</span>
+						<span>
+							<p>PICTURE :</p>
+							<input type="file" name="">
+						</span>
+						<div id="form-add-book-btn">
+							<button>Cancel</button>
+							<button>Update</button>
+						</div>
+					</form>
+				</div>
+				<div class="nav-inner-content">
+					<span class="nav-inner" onclick="nav_inner_click(this)"><h3>COMMIT ALL CHANGES</h3></span>
+					<span><img src="dum-img/right_arrow.png"></span>
+				</div>
+				<div class="expand-nav-inner">
+					<span>
+						TESTING
+					</span>
+					<span>
+						TESTING
+					</span>
+					<span>
+						TESTING
+					</span>
+					<span>
+						TESTING
+					</span>
+				</div>
+			</div>
+			<div id="nav-cart">
+				<div id="cart-content-wrapper">
+					
+				</div>
+				<div id="cart-total-wrapper">
+					<div id="cart-header">
+						<h3>Cart Disabled (Admin Mode)</h3>
+					</div>
+					<div class="cart-jumlah-item">
+						<span>
+							<span>ISBN :</span>
+							<input id="jumlah-item-isbn" type="text" name="" disabled>
+						</span>
+						<span>
+							<span>Jumlah Item :</span>
+							<img src="">
+							<input id="jumlah-item-input" type="text" name="">
+							<img src="">
+						</span>
+					</div>
+					<div class="cart-total-btn">
+						<button id="check-out-btn">Check Out</button>
+						<button>Cancel</button>
+					</div>
+					<div class="cart-total-inner">
+						<span>TOTAL :Rp.</span>
+						<span><input id="total-harga" type="text" name="" style="" value="-"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu-container">
+			<div id="menu-header">
+				<div class="menu-header-wrapper">
+					<h1>Explore</h1>
+				</div>
+				<div class="menu-header-wrapper">
+					<img src="dum-img/search.png">
+					<input id="menu-search-input" type="text" name="" placeholder="Explore the Books!">
+				</div>
+			</div>
+			<div id="menu-books">
+				 <div id="menu-books-header">
+				 	<h1>Collection of Books!</h1>
+				 </div>
+				 <div id="menu-books-content-wrapper">
+				 	<div id="book-12345" class="book-content" onmouseenter="book_hover(this.children[0])" onmouseleave="book_unhover(this.children[0])">
+				 		<div class="book-hover">
+					 		<span class="update-data"><p>Update Book</p></span>
+					 		<span class="delete-data" onclick="add_deleting_data(this)"><p>Delete Book</p></span>
+					 	</div>
+				 		<div class="book-image">
+				 			<img src="dum-img/book.jpg">
+				 		</div>
+				 		<div class="book-desc">
+				 			<p>The Good Thing of Internet in 2022</p>
+				 			<p style="font-weight: 600;">Rp. 50000</p>
+				 		</div>
+				 	</div>
+				 	<div id="book-552345" class="book-content" onmouseenter="book_hover(this.children[0])" onmouseleave="book_unhover(this.children[0])">
+				 		<div class="book-hover">
+					 		<span class="update-data"><p>Update Book</p></span>
+					 		<span class="delete-data" onclick="add_deleting_data(this)"><p>Delete Book</p></span>
+					 	</div>
+				 		<div class="book-image">
+				 			<img src="dum-img/book.jpg">
+				 		</div>
+				 		<div class="book-desc">
+				 			<p>The Good Thing of Internet in 2022</p>
+				 			<p style="font-weight: 600;">Rp. 50000</p>
+				 		</div>
+				 	</div>
+				 	<div id="book-15342345" class="book-content" onmouseenter="book_hover(this.children[0])" onmouseleave="book_unhover(this.children[0])">
+				 		<div class="book-hover">
+					 		<span class="update-data"><p>Update Book</p></span>
+					 		<span class="delete-data" onclick="add_deleting_data(this)"><p>Delete Book</p></span>
+					 	</div>
+				 		<div class="book-image">
+				 			<img src="dum-img/book.jpg">
+				 		</div>
+				 		<div class="book-desc">
+				 			<p>The Good Thing of Internet in 2022</p>
+				 			<p style="font-weight: 600;">Rp. 50000</p>
+				 		</div>
+				 	</div>
+				 	<div id="book-7842345" class="book-content" onmouseenter="book_hover(this.children[0])" onmouseleave="book_unhover(this.children[0])">
+				 		<div class="book-hover">
+					 		<span class="update-data"><p>Update Book</p></span>
+					 		<span class="delete-data" onclick="add_deleting_data(this)"><p>Delete Book</p></span>
+					 	</div>
+				 		<div class="book-image">
+				 			<img src="dum-img/book.jpg">
+				 		</div>
+				 		<div class="book-desc">
+				 			<p>The Good Thing of Internet in 2022</p>
+				 			<p style="font-weight: 600;">Rp. 50000</p>
+				 		</div>
+				 	</div>
+				 	
+				 </div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script.js">
+		
+	</script>
+</body>
+</html>

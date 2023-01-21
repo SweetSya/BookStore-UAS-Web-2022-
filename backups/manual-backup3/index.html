@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>
+		MAIN--
+	</title>
+</head>
+<body>
+	<div id="dom-connection" style="display: none;">
+		
+	</div>
+	<div id="main-container">
+		<div id="nav-open" onclick="open_nav()">
+			<img src="dum-img/menu.png">
+		</div>
+		<div id="nav-container">
+			<div id="nav-close" onclick="close_nav()">
+				<img id="nav-close-btn" src="dum-img/left_arrow.png">
+			</div>
+			<div id="nav-user">
+				<div id="profile-pic">
+					<img src="dum-img/user.png">
+				</div>
+				<div id="profile-desc">
+					<span>
+						Selamat Datang,
+					</span>
+					<span>
+						Guest <a href="login.html">Login!</a>
+					</span>
+				</div>
+			</div>
+			<div id="nav-content">
+				<div class="nav-inner-content">
+					<span><h3>CONTENT</h3></span>
+					<span><img src="dum-img/right_arrow.png"></span>
+				</div>
+				<div class="nav-inner-content">
+					<span><h3>CONTENT</h3></span>
+					<span><img src="dum-img/right_arrow.png"></span>
+				</div>
+				<div class="nav-inner-content">
+					<span><h3>CONTENT</h3></span>
+					<span><img src="dum-img/right_arrow.png"></span>
+				</div>
+				<div class="nav-inner-content">
+					<span><h3>CONTENT</h3></span>
+					<span><img src="dum-img/right_arrow.png"></span>
+				</div>
+			</div>
+			<div id="nav-cart">
+				<div id="cart-content-wrapper">
+					<div class="cart-content">
+						<img src="dum-img/book.jpg">
+					</div>
+					
+				</div>
+				<div id="cart-total-wrapper">
+					<div class="cart-total-btn">
+						<button>Check Out</button>
+						<button>Cancel</button>
+					</div>
+					<div class="cart-total-inner">
+						<span>TOTAL :Rp.</span>
+						<span>50000</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu-container">
+			<div id="menu-header">
+				<div class="menu-header-wrapper">
+					<h1>Explore</h1>
+				</div>
+				<div class="menu-header-wrapper">
+					<img src="dum-img/search.png">
+					<input id="menu-search-input" type="text" name="" placeholder="Explore the Books!">
+				</div>
+			</div>
+			<div id="menu-books">
+				 <div id="menu-books-header">
+				 	<h1>Collection of Books!</h1>
+				 </div>
+				 <div id="menu-books-content-wrapper">
+				 	<div class="book-content" onmouseenter="book_hover(this.children[0])" onmouseleave="book_unhover(this.children[0])">
+				 		<div class="book-hover">
+					 		<span class="add-chart"><p>Add to Chart!</p></span>
+					 		<span class="buy-now"><p>Buy Now!</p></span>
+					 	</div>
+				 		<div class="book-image">
+				 			<img src="dum-img/book.jpg">
+				 		</div>
+				 		<div class="book-desc">
+				 			<p>The Good Thing of Internet in 2022</p>
+				 			<p style="font-weight: 600;">Rp. 50.000</p>
+				 		</div>
+				 	</div>
+				 	
+				 </div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script.js">
+		
+	</script>
+</body>
+</html>
